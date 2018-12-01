@@ -1,0 +1,11 @@
+framework module FrameWorkB {
+  umbrella header "FrameWorkB.h"
+
+  export *
+  module * { export * }
+}
+
+module FrameWorkB.Swift {
+    header "FrameWorkB-Swift.h"
+    requires objc
+}
