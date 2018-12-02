@@ -25,8 +25,8 @@
 		D1FC5CDB21B3401A0071C41E /* FrameworkA.h in Headers */ = {isa = PBXBuildFile; fileRef = D1FC5CD921B3401A0071C41E /* FrameworkA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1FC5CE221B340300071C41E /* SampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FC5CE121B340300071C41E /* SampleClass.swift */; };
 		D1FC5CE821B340EE0071C41E /* SampleClass.swift in Headers */ = {isa = PBXBuildFile; fileRef = D1FC5CE121B340300071C41E /* SampleClass.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1FC5D3F21B344C10071C41E /* FrameWorkB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1FC5D3E21B344C10071C41E /* FrameWorkB.framework */; };
-		D1FC5D4121B345D90071C41E /* FrameWorkB.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D1FC5D3E21B344C10071C41E /* FrameWorkB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1FC5D4821B34A950071C41E /* FrameWorkB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1FC5D4721B34A950071C41E /* FrameWorkB.framework */; };
+		D1FC5D6721B362230071C41E /* FrameWorkB.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D1FC5D4721B34A950071C41E /* FrameWorkB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D1FC5D4121B345D90071C41E /* FrameWorkB.framework in CopyFiles */,
+				D1FC5D6721B362230071C41E /* FrameWorkB.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,7 @@
 		D1FC5CD921B3401A0071C41E /* FrameworkA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkA.h; sourceTree = "<group>"; };
 		D1FC5CDA21B3401A0071C41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1FC5CE121B340300071C41E /* SampleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleClass.swift; sourceTree = "<group>"; };
-		D1FC5D3E21B344C10071C41E /* FrameWorkB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameWorkB.framework; sourceTree = "<group>"; };
+		D1FC5D4721B34A950071C41E /* FrameWorkB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FrameWorkB.framework; path = FrameworkA/FrameWorkB.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FC5D3F21B344C10071C41E /* FrameWorkB.framework in Frameworks */,
+				D1FC5D4821B34A950071C41E /* FrameWorkB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +67,7 @@
 			children = (
 				D1FC5CD821B3401A0071C41E /* FrameworkA */,
 				D1FC5CD721B3401A0071C41E /* Products */,
+				D1FC5D4621B34A940071C41E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +84,17 @@
 			children = (
 				D1FC5CD921B3401A0071C41E /* FrameworkA.h */,
 				D1FC5CE121B340300071C41E /* SampleClass.swift */,
-				D1FC5D3E21B344C10071C41E /* FrameWorkB.framework */,
 				D1FC5CDA21B3401A0071C41E /* Info.plist */,
 			);
 			path = FrameworkA;
+			sourceTree = "<group>";
+		};
+		D1FC5D4621B34A940071C41E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1FC5D4721B34A950071C41E /* FrameWorkB.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +398,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V37F55R98;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/FrameworkA/FrameWorkB.framework\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -399,6 +408,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V37F55R98;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/FrameworkA/FrameWorkB.framework\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

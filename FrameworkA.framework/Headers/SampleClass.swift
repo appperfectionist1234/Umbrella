@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FrameWorkB
+//import FrameWorkB
 open class SampleClass: NSObject {
 
     open func hello()
